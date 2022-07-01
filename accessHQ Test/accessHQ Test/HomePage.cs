@@ -12,7 +12,7 @@ namespace accessHQ_Test
             this.driver = driver;
         }
 
-        internal void setProductQuantity(int quantity, string productName)
+        internal void SetProductQuantity(int quantity, string productName)
         {
             var tableCells = driver.FindElements(by: By.TagName("td"));
             for (int i = 0; i < tableCells.Count; i++)
@@ -29,7 +29,7 @@ namespace accessHQ_Test
             }
         }
 
-        internal double getProductSubtotal(string productName)
+        internal double GetProductSubtotal(string productName)
         {
             var tableCells = driver.FindElements(By.TagName("td"));
             for (int i = 0; i < tableCells.Count; i++)
@@ -41,6 +41,13 @@ namespace accessHQ_Test
                 }
             }
             throw new NoSuchElementException("no such product");
+        }
+
+        internal double GetProductTotal()
+        {
+            String priceText = driver.FindElement(By.ClassName("cart-total")).Text;
+            priceText = priceText.Replace("$", "");
+            return double.Parse(priceText);
         }
     }
 }

@@ -60,7 +60,8 @@ namespace accessHQ_Test
 
 
             //assert
-            Assert.AreEqual("Exploring Jupiter", planetsPage.getPopUp());
+            Assert.AreEqual(expected: "Exploring Jupiter",
+                            actual: planetsPage.getPopUp());
 
         }
 
@@ -76,21 +77,40 @@ namespace accessHQ_Test
             form.SelectState("SA");
 
             form.ClickSubmit();
-            Assert.AreEqual("Thanks for your feedback matthew", form.getPopUp());
+            Assert.AreEqual(expected: "Thanks for your feedback matthew",
+                            actual: form.getPopUp());
 
         }
 
         [TestMethod]
-        public void VerifyLeviSubtotal()
+        public void LeviSubtotalTest()
         {
                 //arrange
 
                 //act
                 HomePage homePage = new HomePage(driver);
-                homePage.setProductQuantity(3, "Levi 501s classic denim");
+                homePage.SetProductQuantity(3, "Levi 501s classic denim");
 
                 //assert
-                Assert.AreEqual(209.97, homePage.getProductSubtotal("Levi 501s classic denim"));
+                Assert.AreEqual(expected: 209.97,
+                                actual: homePage.GetProductSubtotal("Levi 501s classic denim"));
+
+        }
+
+
+        [TestMethod]
+        public void MultipleProductTotalTest()
+        {
+            //arrange
+
+            //act
+            HomePage homePage = new HomePage(driver);
+            homePage.SetProductQuantity(4, "Levi 501s classic denim");
+            homePage.SetProductQuantity(5, "Plain crewneck T-shirt (white)");
+
+            //assert
+            Assert.AreEqual(expected: 379.91,
+                            actual: homePage.GetProductTotal());
 
         }
 
