@@ -47,11 +47,10 @@ namespace accessHQ_Test
         }
 
         [TestMethod]
-        public void VerifyExploreEarthDistanceFromSun()
+        public void ExploreEarthDistanceFromSunTest()
         {
 
             //arrange
-
             new NavBar(driver).ClickPlanetsForm();
 
             //act
@@ -65,11 +64,27 @@ namespace accessHQ_Test
 
         }
 
+        [TestMethod]
+        public void SubmitModernFormTest() 
+        {
+            new NavBar(driver).clickModernForm();
 
-        [TestCleanup]
+            var form = new Form(driver);
+            form.SetNameField("matthew");
+            form.SetEmailField("mail@mail.com");
+            form.ClickAgree();
+            form.SelectState("SA");
+
+            form.ClickSubmit();
+            Assert.AreEqual("Thanks for your feedback matthew", form.getPopUp());
+
+        }
+
+
+/*        [TestCleanup]
         public void TearDown()
         {
             driver.Quit();
-        }
+        }*/
     }
 }

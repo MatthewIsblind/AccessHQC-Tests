@@ -15,5 +15,10 @@ namespace accessHQ_Test
         {
             driver.FindElement(By.CssSelector("[aria-label=planets]")).Click();
         }
+
+        internal void clickModernForm()
+        {
+            driver.FindElement(By.CssSelector("[aria-label=forms]")).Click();
+        }
     }
 }
