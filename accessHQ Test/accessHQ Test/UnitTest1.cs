@@ -35,7 +35,7 @@ namespace accessHQ_Test
         public void ExplorePlanetEarthBaseOnRadiusTest()
         {
 
-            driver.FindElement(By.CssSelector("[aria-label=planets]")).Click();
+            new NavBar(driver).ClickPlanetsForm();
 
             var planetsPage = new PlanetsPage(driver);
             Planet planet = planetsPage.ExploreWithLambda(p => p.GetRadius() == 6371);
@@ -46,6 +46,24 @@ namespace accessHQ_Test
                             actual: planetsPage.getPopUp());
         }
 
+        [TestMethod]
+        public void VerifyExploreEarthDistanceFromSun()
+        {
+
+            //arrange
+
+            new NavBar(driver).ClickPlanetsForm();
+
+            //act
+            var planetsPage = new PlanetsPage(driver);
+            Planet planet = planetsPage.ExploreWithLambda(p => p.getDistanceFromSun() == 778500000);
+            planet.clickExplore();
+
+
+            //assert
+            Assert.AreEqual("Exploring Jupiter", planetsPage.getPopUp());
+
+        }
 
 
         [TestCleanup]

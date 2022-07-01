@@ -33,5 +33,16 @@ namespace accessHQ_Test
 
             return Double.Parse(raidusText);
         }
+
+        internal long getDistanceFromSun()
+        {
+            String raidusText = this.webElement.FindElement(By.ClassName("distance")).Text;
+
+            raidusText = raidusText.Replace(" km", "");
+            raidusText = raidusText.Replace(",", "");
+
+
+            return long.Parse(raidusText);
+        }
     }
 }
