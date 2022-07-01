@@ -11,20 +11,27 @@ namespace accessHQ_Test
             this.webElement = planetElement;
         }
 
-        internal void clickExplore()
+        public void clickExplore()
         {
             this.webElement.FindElement(By.TagName("button")).Click();
         }
 
-        internal String GetName()
+        public String GetName()
         {
 
             return this.webElement.FindElement(By.ClassName("headline")).Text;
         }
 
-        internal string? GetRadius()
+        public double GetRadius()
         {
-            throw new NotImplementedException();
+            String raidusText = this.webElement.FindElement(By.ClassName("radius")).Text;
+            
+            raidusText = raidusText.Replace(" km", "");
+            raidusText = raidusText.Replace(",", "");
+
+            
+
+            return Double.Parse(raidusText);
         }
     }
 }

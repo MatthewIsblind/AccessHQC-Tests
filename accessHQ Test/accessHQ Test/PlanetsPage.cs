@@ -24,7 +24,7 @@ namespace accessHQ_Test
 
             }
 
-            throw new NotImplementedException();
+            throw new NotImplementedException("no such planent");
         }
 
         internal object getPopUp()

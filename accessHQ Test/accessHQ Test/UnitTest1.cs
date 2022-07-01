@@ -31,6 +31,20 @@ namespace accessHQ_Test
                             actual: planetsPage.getPopUp());
         }
 
+        [TestMethod]
+        public void ExplorePlanetEarthBaseOnRadiusTest()
+        {
+
+            driver.FindElement(By.CssSelector("[aria-label=planets]")).Click();
+
+            var planetsPage = new PlanetsPage(driver);
+            Planet planet = planetsPage.ExploreWithLambda(p => p.GetRadius() == 6371);
+            planet.clickExplore();
+
+
+            Assert.AreEqual(expected: "Exploring Earth",
+                            actual: planetsPage.getPopUp());
+        }
 
 
 
