@@ -21,5 +21,10 @@ namespace accessHQ_Test
 
             return this.webElement.FindElement(By.ClassName("headline")).Text;
         }
+
+        internal string? GetRadius()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

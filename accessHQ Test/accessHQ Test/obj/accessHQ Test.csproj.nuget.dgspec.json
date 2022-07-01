@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\source\\repos\\visual studio c# test\\accessHQ Test\\accessHQ Test\\accessHQ Test.csproj": {}
+    "C:\\source\\repos\\visual studio c# test\\AccessHQC-Tests\\accessHQ Test\\accessHQ Test\\accessHQ Test.csproj": {}
   },
   "projects": {
-    "C:\\source\\repos\\visual studio c# test\\accessHQ Test\\accessHQ Test\\accessHQ Test.csproj": {
+    "C:\\source\\repos\\visual studio c# test\\AccessHQC-Tests\\accessHQ Test\\accessHQ Test\\accessHQ Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\source\\repos\\visual studio c# test\\accessHQ Test\\accessHQ Test\\accessHQ Test.csproj",
+        "projectUniqueName": "C:\\source\\repos\\visual studio c# test\\AccessHQC-Tests\\accessHQ Test\\accessHQ Test\\accessHQ Test.csproj",
         "projectName": "accessHQ Test",
-        "projectPath": "C:\\source\\repos\\visual studio c# test\\accessHQ Test\\accessHQ Test\\accessHQ Test.csproj",
+        "projectPath": "C:\\source\\repos\\visual studio c# test\\AccessHQC-Tests\\accessHQ Test\\accessHQ Test\\accessHQ Test.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\source\\repos\\visual studio c# test\\accessHQ Test\\accessHQ Test\\obj\\",
+        "outputPath": "C:\\source\\repos\\visual studio c# test\\AccessHQC-Tests\\accessHQ Test\\accessHQ Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

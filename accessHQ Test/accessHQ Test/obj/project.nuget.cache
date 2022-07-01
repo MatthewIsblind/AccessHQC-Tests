@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "59FvQcTdE2sLMv5qnUvgxW0e2nHU6NWl95KYgKq2WypDIESQBXVbiRpAGmwElwaWhOtqoUGiAffGaK0gy6SDZQ==",
+  "dgSpecHash": "du2gi68hea2xR2n14cIcNP/S34ZjOHAU7rI6riA/UYA2W4W4tjt5QjTvlz9y+kAZtgnL9tZdnzYSc5rcZpSVQg==",
   "success": true,
-  "projectFilePath": "C:\\source\\repos\\visual studio c# test\\accessHQ Test\\accessHQ Test\\accessHQ Test.csproj",
+  "projectFilePath": "C:\\source\\repos\\visual studio c# test\\AccessHQC-Tests\\accessHQ Test\\accessHQ Test\\accessHQ Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
