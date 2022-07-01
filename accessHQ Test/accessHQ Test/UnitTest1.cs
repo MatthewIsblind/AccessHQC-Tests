@@ -80,11 +80,25 @@ namespace accessHQ_Test
 
         }
 
+        [TestMethod]
+        public void VerifyLeviSubtotal()
+        {
+                //arrange
 
-/*        [TestCleanup]
+                //act
+                HomePage homePage = new HomePage(driver);
+                homePage.setProductQuantity(3, "Levi 501s classic denim");
+
+                //assert
+                Assert.AreEqual(209.97, homePage.getProductSubtotal("Levi 501s classic denim"));
+
+        }
+
+
+        [TestCleanup]
         public void TearDown()
         {
             driver.Quit();
-        }*/
+        }
     }
 }
